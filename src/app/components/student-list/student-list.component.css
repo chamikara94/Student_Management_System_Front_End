@@ -1,0 +1,43 @@
+.btn-purple {
+    background-color:#72DD22 ;
+    border-color: #72DD22;
+    color: white;
+    font-weight: bold;
+  }
+
+  .btn-purple:hover {
+    background-color: #bfa11e; /* Darker shade of green */
+    border-color: #bfa11e;
+    color: white;
+  }
+  
+  .btn-danger {
+    font-weight: bold;
+}
+
+.table-container {
+  position: relative;
+}
+
+.table-container h2 {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #6c757d; 
+  margin: 0;
+  padding: 10px 0;
+}
+.table-responsive {
+  max-height: 400px; 
+  overflow-y: auto;
+}
+.table thead th{
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+  background-color: #343a40;
+}
+
+.limited-height {
+  max-height: 740px; 
+}

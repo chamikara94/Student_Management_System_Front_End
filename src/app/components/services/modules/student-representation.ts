@@ -1,9 +1,11 @@
 export interface StudentRepresentation {
-    id?:number,
-    indexNo?:string,
-    firstName?:string,
-    lastName?:string,
-    gender?:string,
-    dateOfBirth?:string,
-    gpa?:number,
+    id?: number | string,
+    index_no?: string,
+    first_Name?: string,
+    last_Name?: string,
+    gender?: string,
+    dateofbirth?: string,
+    gpa?: number,
 }
+
+

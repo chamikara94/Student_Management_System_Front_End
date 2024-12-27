@@ -1,0 +1,56 @@
+<div class="text-bg-dark text-center">
+  <h1>Student Management System</h1>
+</div>
+
+<br/>
+      <div class="container w-50">
+
+        <form (ngSubmit)="updateStudent()" class="row g-3 container border bg-light p-3" >
+          <div>
+            <h2 class="text-bg-secondary text-center">Edit Student Details</h2>
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="indexno" class="form-label">Index no</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" class="form-control" id="indexno" name="studentIndex" disabled="true"
+            [(ngModel)]="studentObj.index_no">
+          </div>
+          
+          <div class="mb-3">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" class="form-control" id="fname" name="studentFname"
+            [(ngModel)]="studentObj.first_Name">
+          </div>
+          
+          <div class="mb-3">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" class="form-control" id="lname" name="studentLname"
+            [(ngModel)]="studentObj.last_Name">
+          </div>
+
+          <div class="col-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select id="gender" [ngModelOptions]="{standalone: true}" class="form-select"
+            [(ngModel)]="studentObj.gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input type="date" id="dateOfBirth" class="form-control" [(ngModel)]="studentObj.dateofbirth" name="dateOfBirth">
+          </div>
+
+          <div class="col-md-6">
+            <label for="gpa" class="form-label">GPA</label>
+            <input type="text" [ngModelOptions]="{standalone: true}" class="form-control" id="gpa" name="gpa"
+            [(ngModel)]="studentObj.gpa">
+          </div>
+
+          <div class="col-12 d-flex justify-content-center">
+            <button type="submit" class="btn btn-success me-3">Update</button>
+            <button type="button" class="btn btn-danger"(click)="confirmCancel()">Cancel</button>
+          </div>
+        </form>
+      </div>
+   
