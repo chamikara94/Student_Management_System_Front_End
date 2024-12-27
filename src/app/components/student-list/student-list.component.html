@@ -41,7 +41,9 @@
             <td>{{ student.dateofbirth }}</td>
             <td>{{ student.gpa }}</td>
             <td class="d-flex justify-content-end">
-              <button class="btn btn-purple me-3" (click)="editStudent(student.index_no)">Edit</button>
+              <button class="btn btn-purple me-3" (click)="editStudent(student.index_no)">
+                <i class="fas fa-pen me-2"></i>Edit
+              </button>
               <button class="btn btn-danger me-3" (click)="deleteStudent(student.index_no)">Delete</button>
             </td>
           </tr>

@@ -23,12 +23,15 @@ export class StudentListComponent implements OnInit {
     private titleService: Title, 
   ) {}
 
+
   ngOnInit(): void {
     this.studentService.getAllStudents().subscribe(data => {
       this.students = data;
     });
     this.titleService.setTitle('Student Management System');
   }
+
+  
   searchStudent(indexNo: string): void {
     if (!indexNo) {
       this.studentService.getAllStudents().subscribe({
