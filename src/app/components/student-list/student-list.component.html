@@ -1,37 +1,55 @@
-<div class="text-bg-dark text-center">
-  <h1>Student Management System</h1>
+<div class="sticky-top bg-light">
+  <div class="text-bg-dark text-center">
+    <h1>Student Management System</h1>
+  </div>
+  <br />
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex w-50">
+        <input
+          #searchInput
+          type="text"
+          (keyup.enter)="searchStudent(searchInput.value)"
+          class="form-control border border-dark me-2"
+          placeholder="Enter student index number"
+          [(ngModel)]="searchIndexNo"
+        />
+        <button
+          class="btn btn-primary me-2 d-flex align-items-center"
+          (click)="searchStudent(searchInput.value)"
+        >
+          <i class="fas fa-search me-2"></i>Search
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-primary" (click)="AddStudent()">
+          Add Student
+        </button>
+      </div>
+    </div>
+    <br />
+    <h2 class="text-bg-secondary text-center m-0 py-2">All Student Details</h2>
+    <table class="table m-0">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Index No</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Date of Birth</th>
+          <th scope="col">GPA</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
 </div>
-<br/>
+
 
 <div class="container">
-  <div class="d-flex justify-content-between">
-    <div class="d-flex w-50">
-      <input #searchInput type="text" (keyup.enter)="searchStudent(searchInput.value)" class="form-control border border-dark me-2" placeholder="Enter student index number" [(ngModel)]="searchIndexNo">
-      <button class="btn btn-primary me-2 d-flex align-items-center" (click)="searchStudent(searchInput.value)">
-        <i class="fas fa-search me-2 "></i>Search
-      </button>
-    </div>
-    <div>
-      <button class="btn btn-primary" (click)="AddStudent()">Add Student</button>
-    </div>
-  </div>
-  <br/>
-  
   <div class="table-container border bg-light">
-    <h2 class="text-bg-secondary text-center">All Student Details</h2>
     <div class="table-responsive limited-height">
       <table class="table">
-        <thead class="table-dark">
-          <tr>
-            <th scope="col">Index No</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Date of Birth</th>
-            <th scope="col">GPA</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
         <tbody>
           <tr *ngFor="let student of students; let i = index">
             <td>{{ student.index_no }}</td>
@@ -41,10 +59,18 @@
             <td>{{ student.dateofbirth }}</td>
             <td>{{ student.gpa }}</td>
             <td class="d-flex justify-content-end">
-              <button class="btn btn-purple me-3" (click)="editStudent(student.index_no)">
+              <button
+                class="btn btn-purple me-3"
+                (click)="editStudent(student.index_no)"
+              >
                 <i class="fas fa-pen me-2"></i>Edit
               </button>
-              <button class="btn btn-danger me-3" (click)="deleteStudent(student.index_no)">Delete</button>
+              <button
+                class="btn btn-danger me-3"
+                (click)="deleteStudent(student.index_no)"
+              >
+                Delete
+              </button>
             </td>
           </tr>
         </tbody>
