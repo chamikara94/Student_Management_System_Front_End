@@ -28,10 +28,10 @@ import { StudentUpdateComponent } from './components/student-update/student-upda
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
-    SweetAlert2Module.forRoot(),
     NgbModule,
     RouterModule,
     CommonModule,
+    SweetAlert2Module.forRoot(),
     StudentListComponent
   ],
   providers: [StudentService],
