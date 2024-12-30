@@ -32,13 +32,13 @@
     <table class="table m-0">
       <thead class="table-dark">
         <tr>
-          <th scope="col">Index No</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
+          <th scope="col"width="14%">Index No</th>
+          <th scope="col"width="12%">First Name</th>
+          <th scope="col"width="17%">Last Name</th>
           <th scope="col">Gender</th>
           <th scope="col">Date of Birth</th>
           <th scope="col">GPA</th>
-          <th scope="col"></th>
+          <th scope="col"width="29%"></th>
         </tr>
       </thead>
     </table>
@@ -49,7 +49,7 @@
 <div class="container">
   <div class="table-container border bg-light">
     <div class="table-responsive limited-height">
-      <table class="table">
+      <table class="table table-hover ">
         <tbody>
           <tr *ngFor="let student of students; let i = index">
             <td>{{ student.index_no }}</td>
@@ -57,12 +57,11 @@
             <td>{{ student.last_Name }}</td>
             <td>{{ student.gender }}</td>
             <td>{{ student.dateofbirth }}</td>
-            <td>{{ student.gpa }}</td>
-            <td class="d-flex justify-content-end">
+            <td width="17%">{{ student.gpa }}</td>
+            <td class=" justify-content-end "width= 17%>
               <button
                 class="btn btn-purple me-3"
-                (click)="editStudent(student.index_no)"
-              >
+                (click)="editStudent(student.index_no)">
                 <i class="fas fa-pen me-2"></i>Edit
               </button>
               <button
