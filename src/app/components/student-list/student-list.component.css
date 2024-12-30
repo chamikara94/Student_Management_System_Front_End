@@ -41,3 +41,7 @@
 .limited-height {
   max-height: 740px; 
 }
+
+.table-hover tbody tr:hover > td {
+  cursor: pointer;
+}
