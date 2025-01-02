@@ -1,17 +1,33 @@
 #  Build Error Solution 
 normally build this Code comes some errors this is how to privelat..  
 Project build command of 
+
+```bash
 npm install 
+```
 comes some error solution for that Remove "@sweetalert2/ngx-sweetalert2": "^12.0.0",  on package-lock.json file,  
+
+```bash
 npm uninstall @sweetalert2/ngx-sweetalert2
+```
 
-after again give a command 
+After again give a command 
+```bash
 npm install 
-after the build angular project reinstall sweetalert2 for this give below command.
+```
 
+After the build angular project reinstall sweetalert2 for this give below command.
+
+```bash
 npm install sweetalert2 @sweetalert2/ngx-sweetalert2@^12.0.0
+```
+After that give 
 
-After that give ng serve or npm start command.
+```bash
+ng serve or npm start 
+```
+
+command.
 
 
 
