@@ -1,5 +1,21 @@
-# FrontEnd
+#  Build Error Solution 
+normally build this Code comes some errors this is how to privelat..  
+Project build command of 
+npm install 
+comes some error solution for that Remove "@sweetalert2/ngx-sweetalert2": "^12.0.0",  on package-lock.json file,  
+npm uninstall @sweetalert2/ngx-sweetalert2
 
+after again give a command 
+npm install 
+after the build angular project reinstall sweetalert2 for this give below command.
+
+npm install sweetalert2 @sweetalert2/ngx-sweetalert2@^12.0.0
+
+After that give ng serve or npm start command.
+
+
+
+# FrontEnd
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
 ## Development server
